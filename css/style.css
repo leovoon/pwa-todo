@@ -1,0 +1,236 @@
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-family: 'Titillium Web', sans-serif;
+    touch-action: manipulation;
+
+}
+
+/* ------------ container ------------ */
+.container {
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+/* ------------ header ------------ */
+.header {
+    width: 100%;
+    height: 30vh;
+    background-image: url('../img/bg2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    font-size: 1em;
+
+}
+
+.clear {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+.clear i {
+    font-size: 30px;
+    color: #FFF;
+}
+
+.clear i:hover {
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: scale(1.1);
+    transform: rotate(20deg);
+}
+
+#date {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: #FFF;
+    font-size: 2rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* ------------ content ------------ */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    width: 100%;
+    height: 60vh;
+    background-color: #FFF;
+    overflow: auto;
+
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.content ul {
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    max-width: 100%;
+    min-height: 50px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 5px;
+    background: rgba(226, 225, 225, 0.404);
+}
+
+
+.item:hover {
+    box-shadow: 0 12px 28px rgba(0,0,0,0.24), 
+    0 8px 10px rgba(0,0,0,0.18);
+    background: lightpink;
+}
+
+.item i.co {
+    position: absolute;
+    font-size: 20px;
+    padding-left: 5px;
+    left: 15px;
+    top: 15px;
+}
+
+.item i.co:hover {
+    cursor: pointer;
+}
+
+.fa-check-circle {
+    color: #6eb200;
+}
+
+.item p.text {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    left: 50px;
+    top: 10px;
+    background-color: transparent;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.lineThrough {
+    text-decoration: line-through;
+    color: rgb(187, 187, 187);
+}
+
+.item i.de {
+    position: absolute;
+    font-size: 20px;
+    right: 15px;
+    top: 15px;
+}
+
+.item i.de:hover {
+    color: #af0000;
+    cursor: pointer;
+}
+
+/* ------------ add item ------------ */
+.add-to-do {
+    position: relative;
+    height: 10vh;
+    background-color: #FFF;
+    padding: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}   
+
+.add-to-do i {
+    position: absolute;
+    font-size: 50px;
+    color: #8f41f6;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.add-to-do button {
+    
+    position: relative;
+    background: transparent;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px 1px rgba(184, 184, 184, 0.404);
+    position: absolute;
+height: 50px;  
+    
+
+}
+
+.add-to-do button:hover{
+    cursor: pointer;
+}
+
+.add-to-do button:focus {
+outline: none;
+}
+
+.add-to-do i:active {
+    color: rgb(123, 106, 235);
+    outline: none;
+}
+
+.add-to-do input {
+    position: absolute;
+    left: 80px;
+    height: 50px;   
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.add-to-do input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #b6b6b6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+
+.add-to-do input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+
+.add-to-do input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+
+.add-to-do input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
