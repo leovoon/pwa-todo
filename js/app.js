@@ -110,7 +110,7 @@ function addToDo(toDo, id, done, trash) {
     const LINE = done ? LINE_THROUGH : "";
 
     const item = `<li class="item">
-                    <img src="../img/icons/${DONE}.png" class="${DONE}" job="complete" id="${id}"></img>
+                    <div class="${DONE}" job="complete" id="${id}"></div>
                     <p class="text ${LINE}">${toDo}</p>
                     <img src="../img/icons/minus.png" class="minus-circle" job="delete" id="${id}"></img>
                   </li>
