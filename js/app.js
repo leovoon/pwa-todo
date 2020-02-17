@@ -19,8 +19,8 @@ const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const confirmClear = document.querySelector('.confirm')
 // Classes names
-const CHECK = "fa-check-circle"
-const UNCHECK = "fa-circle-thin"
+const CHECK = "check-circle"
+const UNCHECK = "uncheck-circle"
 const LINE_THROUGH = "lineThrough"
 
 // Variables
@@ -48,8 +48,6 @@ function loadList(array) {
 }
 
 // clear the local storage
-
-
 // dialog model 
 confirmClear.addEventListener("click", () => {
     localStorage.clear();
@@ -112,9 +110,9 @@ function addToDo(toDo, id, done, trash) {
     const LINE = done ? LINE_THROUGH : "";
 
     const item = `<li class="item">
-                    <i class="fa ${DONE} co" job="complete" id="${id}"></i>
+                    <img src="../img/icons/${DONE}.png" class="${DONE}" job="complete" id="${id}"></img>
                     <p class="text ${LINE}">${toDo}</p>
-                    <i class="fa fa-minus-circle de" job="delete" id="${id}"></i>
+                    <img src="../img/icons/minus.png" class="minus-circle" job="delete" id="${id}"></img>
                   </li>
                 `;
 

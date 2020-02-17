@@ -6,6 +6,9 @@ const assets = [
   "/img/backdrop.jpg",
   "/img/icons/plus.png",
   "/img/icons/trash.png",
+  "/img/icons/minus.png",
+  "/img/icons/check-circle.png",
+  "/img/icons/uncheck-circle.png",
   "/js/app.js",
 ]
 
