@@ -23,7 +23,7 @@ body {
 .header {
     width: 100%;
     height: 30vh;
-    background-image: url('../img/bg2.jpg');
+    background-image: url('../img/backdrop.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 15px 15px 0 0;
@@ -40,23 +40,21 @@ body {
     top: 20px;
     border: none;
     background: transparent;
+    background-image: url('../img/icons/trash.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform ease 0.3s;
+
 }
 
-.clear i {
-    font-size: 1.35rem;
-    color: #FFF;
-}
 
-.clear i:hover {
-    cursor: pointer;
-    text-shadow: 1px 3px 5px #000;
-    transform: scale(1.1);
-    transform: rotate(20deg);
-    
-}
 
 .clear:focus {
     outline: none;
+}
+
+.clear:hover {
+    transform: rotate(15deg);
 }
 
 #date {
@@ -102,13 +100,14 @@ body {
     padding: 0;
     margin: 5px;
     background: rgba(226, 225, 225, 0.404);
+    transition: all ease 0.2s;
 }
 
 
 .item:hover {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.18),
         0 4px 8px rgba(0, 0, 0, 0.18);
-    background: rgb(183, 223, 221);
+    background: rgb(228, 202, 228);
 }
 
 .item i.co {
@@ -182,19 +181,33 @@ body {
     position: relative;
     background: transparent;
     width: 50px;
+    background-image: url('../img/icons/plus.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     border: none;
     border-radius: 50%;
     box-shadow: 0 2px 2px 1px rgba(184, 184, 184, 0.404);
     position: absolute;
     height: 50px;
-
-
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: transform ease-in-out 0.3s ;
 }
 
 .add-to-do button:hover {
     cursor: pointer;
+    
 }
 
+.add-to-do button:active {
+    transform: rotate(180deg);
+
+}
 .add-to-do button:focus {
     outline: none;
 }
@@ -212,6 +225,10 @@ body {
     border: none;
     font-size: 20px;
     padding-left: 10px;
+}
+
+.add-to-do input:focus {
+    outline: #ccc;
 }
 
 .add-to-do input::-webkit-input-placeholder {
@@ -302,10 +319,25 @@ box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.12);
     margin: 20px;
     width: 100%;
     font-size: 16px;
+    transition: all ease 0.3s;
 
 }
 
+.modal-buttons > * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.modal-buttons >*:hover {
+    border: 2px solid gray;
+    margin: -2px 0;
+    font-weight: bold;
 
+}
 .modal-buttons .confirm {
     background: rgb(245, 92, 92);
     color: white;

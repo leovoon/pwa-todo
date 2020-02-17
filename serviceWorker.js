@@ -3,15 +3,10 @@ const assets = [
   "/",
   "/index.html",
   "/css/style.css",
-  "/css/font-awesome.css",
-  "/fonts/FontAwesome.otf",
-  "/fonts/fontawesome-webfont.eot",
-  "/fonts/fontawesome-webfont.svg",
-  "/fonts/fontawesome-webfont.ttf",
-  "/fonts/fontawesome-webfont.woff",
-  "/fonts/fontawesome-webfont.woff2",
+  "/img/backdrop.jpg",
+  "/img/icons/plus.png",
+  "/img/icons/trash.png",
   "/js/app.js",
-  "/img/bg2.jpg",
 ]
 
 self.addEventListener("install", installEvent => {
